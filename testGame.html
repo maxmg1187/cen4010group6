@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <title>Testing Game</title>
+    
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/c635654ae4.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id = "header">
+            <div class="container">
+                <button id = "playButton">Play</button>
+            </div>
+        </div>
+
+        <!--JavasSripts Section-->
+
+        <script>
+            // Get references to the button and container
+            const button = document.getElementById('playButton');
+            const container = document.getElementById('header');
+          
+            // Function to change the background image
+            function changeBackground() {
+              container.style.backgroundImage = "url('images/spring.jpg')";
+            }
+          
+            // Add a click event listener to the button
+            button.addEventListener('click', changeBackground);
+          </script>
+    </body>
+
+
+</html>
