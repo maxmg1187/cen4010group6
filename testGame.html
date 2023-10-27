@@ -15,7 +15,8 @@
     <body>
         <div id = "header">
             <div class="container">
-                <button id = "playButton">Play</button>
+                
+                <button id = "playButton">Play</button> 
             </div>
         </div>
 
@@ -23,17 +24,22 @@
 
         <script>
             // Get references to the button and container
-            const button = document.getElementById('playButton');
+            const button = document.getElementById('Play');
             const container = document.getElementById('header');
           
-            // Function to change the background image
+            // Function to change the background image with a pixelated transition
             function changeBackground() {
-              container.style.backgroundImage = "url('images/spring.jpg')";
+                container.classList.add('pixelate'); // Apply pixelation effect
+                container.style.opacity = 0; // Set the opacity to 0 (fully transparent)
+                setTimeout(() => {
+                    container.style.backgroundImage = "url('spring.jpg')"; // Change the background image
+                    container.style.opacity = 1; // Set the opacity to 1 (fully visible) with a fade-in transition
+                }, 1000); // Adjust the delay (in milliseconds) to control the fade duration
             }
           
             // Add a click event listener to the button
             button.addEventListener('click', changeBackground);
-          </script>
+        </script>
     </body>
 
 

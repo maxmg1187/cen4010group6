@@ -11,10 +11,13 @@
     align-items: center; /* Center vertically */
 
     transition: background 1s;
+    opacity: 2s;
+
+    image-rendering: pixelated;
 }
 
 button {
-    background-color: #0074d9; /* Background color */
+    background-color: #96b32f; /* Background color */
     color: #fff; /* Text color */
     border: none; /* Remove the button border */
     padding: 15px 25px; /* Padding around text */
@@ -24,5 +27,5 @@ button {
   
   /* Hover effect */
   button:hover {
-    background-color: #0056b3; /* Change color on hover */
+    background-color: #47688c; /* Change color on hover */
   }
