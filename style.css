@@ -71,7 +71,7 @@
 form input, form textarea{
   position: relative;
   top: -220px;
-  left: 900px;
+  left: 1050px;
   width: 15%;
   border: 0;
   outline: none;
@@ -91,7 +91,7 @@ form .btn2{
   position: relative;
   size: 20px;
   top: -150px;
-  left: 663px;
+  left: 810px;
   background-color: #000000; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove the button border */
