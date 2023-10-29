@@ -14,9 +14,10 @@
 }
 
 /* Play button */
-button {
+.playButton {
   position: relative;
   top: 250px;
+  left: 450px;
   background-color: #000000; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove the button border */
@@ -26,7 +27,7 @@ button {
 }
   
 /* Hover effect */
-button:hover {
+.playButton:hover {
   background-color: #2b2e31; /* Change color on hover */
 }
 
@@ -53,6 +54,52 @@ button:hover {
     left: 8%; /* Start from the right edge */
   }
   100% {
-    left: 50%; /* Move to the left edge */
+    left: 20%; /* Move to the left edge */
   }
+}
+
+
+
+.chatGPT{
+  flex-basis: 60%;
+}
+
+.chatGPT form{
+  width: 100%;
+}
+
+form input, form textarea{
+  position: relative;
+  top: -220px;
+  left: 900px;
+  width: 15%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 50px;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+
+}
+
+form .btn2{
+  cursor: pointer;
+}
+
+.btn.btn2{
+  position: relative;
+  size: 20px;
+  top: -150px;
+  left: 663px;
+  background-color: #000000; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove the button border */
+  padding: 15px 25px; /* Padding around text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+.btn.btn2:hover {
+  background-color: #2b2e31; /* Change color on hover */
 }

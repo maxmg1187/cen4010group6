@@ -15,11 +15,33 @@
     <body>
         <div id = "header">
             <div class="container">
-                <button id = "playButton">Play</button>
+                <button class = "playButton">Play</button>
+            </div>
+
+            <div class="knight"></div>
+
+            <div class="chatGPT">
+                <form name="submit-to-chatGPT">
+                    <textarea name="Message" rows="2" placeholder="Your Text"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
             </div>
         </div>
 
-        <div class="knight"></div>
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
 
         <!--JavasSripts Section-->
         <script> main.js </script>
@@ -51,6 +73,16 @@
             // Add a click event listener to the button
             button.addEventListener('click', changeBackground);
           </script>
+
+
+
+        <script>
+            const scriptURL = '' //chatGPT scripts
+            const form = document.forms['submit-to-chatGPT']
+            
+            //use to submit to chatGPT here
+
+        </script> 
     </body>
 
 
