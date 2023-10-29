@@ -16,8 +16,8 @@
 /* Play button */
 .playButton {
   position: relative;
-  top: 170px;
-  left: 180px;
+  top: 150px;
+  left: 680px;
   background-color: #000000; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove the button border */
@@ -32,12 +32,13 @@
 }
 
 .knight {
-  position: absolute;
+  position: relative;
+  top: 120px;
+  left: 50%;
+
   width: 450px;
   height: 252px;
   background: url(images/Knight1-Walk.png);
-  top: 50%;
-  left: 50%;
   animation: knight 0.9s steps(5) infinite, moveknight 5s linear infinite;
 }
 
@@ -51,10 +52,10 @@
 
 @keyframes moveknight {
   0% {
-    left: 8%; /* Start from the right edge */
+    left: 4%; /* Start from the left edge */
   }
   100% {
-    left: 20%; /* Move to the left edge */
+    left: 4%; /* Move to the left edge to right*/
   }
 }
 
@@ -70,9 +71,10 @@
 
 form input, form textarea{
   position: relative;
-  top: -150px;
-  left: 345px;
-  width: 45%;
+  top: 250px;
+  left: -200px;
+
+  width: 75%;
   
   background-color: rgba(0, 0, 0, 0); /* Set a transparent background using rgba() */
   border: 1px solid #ded6d6;
@@ -89,10 +91,11 @@ form .btn2{
 }
 
 .btn.btn2{
-  position: absolute;
+  position: relative;
   size: 20px;
-  top: 600px;
-  left: 1100px;
+  top: 215px;
+  left: -180px;
+
   background-color: #000000; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove the button border */
