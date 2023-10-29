@@ -73,10 +73,10 @@
   width: 100%;
 }
 
-form input, form textarea{
+#input{
   position: absolute;
   top: 85%;
-  left: 46%;
+  left: 47%;
   transform: translate(-50%, -50%);
 
   width: 47%;
@@ -88,7 +88,23 @@ form input, form textarea{
   color: white;
   font-size: 18px;
   border-radius: 6px;
+}
 
+#output{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50%;
+  
+  background-color: rgba(0, 0, 0, 0); /* Set a transparent background using rgba() */
+  border: 1px solid #ded6d6;
+  outline: none;
+  padding: 15px;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
 }
 
 form .btn2{
