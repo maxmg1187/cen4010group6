@@ -7,11 +7,11 @@ const prompt = 'Translate the following English text to French: "Hello, how are 
 
 async function main() {
   const chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: 'user', content: 'Say this is a test' }],
+    messages: [{ role: 'user', content: prompt }],
     model: 'gpt-3.5-turbo',
   });
 
-  console.log(chatCompletion.choices);
+  console.log(chatCompletion.choices[0].message.content);
 }
 
 main();
