@@ -19,3 +19,7 @@ inputElement.addEventListener("input", function(){
   sendRequest();
   outputElement.textContent = chatCompletion.choices[0].message.content;
 })
+
+
+
+            

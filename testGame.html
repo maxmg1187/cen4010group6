@@ -31,73 +31,9 @@
         </div>
 
         
-        
-
-
-
-
-
-
-        <script src="main.js"></script>
-
-        <!--JavasSripts Section-->      
-        <script>
-            // Get references to the button and container
-            const button = document.getElementById('playButton');
-            const container = document.getElementById('header');
-          
-             // Array of image URLs
-             const images = [
-                'images/spring.jpg',
-                'images/summer.jpg',
-                'images/autumn.jpg',
-                'images/winter.jpg'
-            ];
-
-            // Function to change the background image
-            function changeBackground() {
-            // Select a random index from the images array
-            const randomIndex = Math.floor(Math.random() * images.length);
-
-            // Get the random image URL
-            const randomImage = images[randomIndex];
-
-            // Set the background image
-            container.style.backgroundImage = `url(${randomImage})`;
-            }
-          
-            // Add a click event listener to the button
-            button.addEventListener('click', changeBackground);
-        </script>
-
-
-
-        <script>
-            const scriptURL = '' //chatGPT scripts
-            const form = document.forms['submit-to-chatGPT']
-
-            // Get references to the input and output text areas
-            const outputTextarea = document.getElementById('output');
-
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Get the user's message from the textarea
-                const userMessage = form.elements['input'].value;
-
-                // Process the message (you can use your chatbot logic here)
-
-                // Update the output textarea with the response
-                const response = userMessage;
-                outputTextarea.value = response;
-
-                // Clear the input textarea
-                form.elements['input'].value = '';
-            });
-            
-            //use to submit to chatGPT here
-
-        </script> 
+        <script src="playButton.js"></script>
+        <script src="openAI.js"></script>
+        <script src="chatBox.js"></script>
     </body>
 
 
