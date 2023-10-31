@@ -1,10 +1,12 @@
+
+
 /* Game layout */
 #header{
   width: 100%; /* Width of frame */
   height: 100vh; /* Height of frame*/
 
   background-image: url(images/background.jpg); /* Default screen*/
-  background-size: 900px; /* Size of background*/
+  background-size: 100%; /* Size of background*/
   background-position: center; /* Fixed position*/
   background-repeat: no-repeat; /* No repeating images */
    
@@ -18,11 +20,11 @@
 /* Play button */
 .playButton { 
   position: absolute;
-  top: 71%; /* Vertically center the button */
+  top: 85%; /* Vertically center the button */
   left: 50%; /* Horizontally center the button */
   transform: translate(-50%, -50%); /* Center the button precisely */
   
-  background-color: #000000; /* Background color */
+  background-color: #ff0000; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove the button border */
   padding: 15px 25px; /* Padding around text */
@@ -63,8 +65,6 @@
   }
 }
 
-
-
 .chatGPT{
   flex-basis: 60%;
 }
@@ -75,13 +75,13 @@
 
 #input{
   position: absolute;
-  top: 85%;
+  top: 95%;
   left: 47%;
   transform: translate(-50%, -50%);
 
-  width: 47%;
+  width: 80%;
   
-  background-color: rgba(0, 0, 0, 0); /* Set a transparent background using rgba() */
+  background-color: black;    /* Set a transparent background using rgba(0, 0, 0, 0); */
   border: 1px solid #ded6d6;
   outline: none;
   padding: 15px;
@@ -92,13 +92,13 @@
 
 #output{
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 10%;
+  left: 47%;
   transform: translate(-50%, -50%);
 
-  width: 50%;
+  width: 80%;
   
-  background-color: rgba(0, 0, 0, 0); /* Set a transparent background using rgba() */
+  background-color: black;
   border: 1px solid #ded6d6;
   outline: none;
   padding: 15px;
@@ -113,8 +113,8 @@ form .btn2{
 
 .btn.btn2{
   position: absolute;
-  top: 85%;
-  left: 75%;
+  top: 95%;
+  left: 93%;
   transform: translate(-50%, -50%);
 
   size: 20px;
