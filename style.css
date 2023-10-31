@@ -24,7 +24,7 @@
   left: 50%; /* Horizontally center the button */
   transform: translate(-50%, -50%); /* Center the button precisely */
   
-  background-color: #ff0000; /* Background color */
+  background-color: #000000; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove the button border */
   padding: 15px 25px; /* Padding around text */
@@ -42,8 +42,8 @@
   top: 70%;
   transform: translate(20%, -50%);
 
-  width: 450px;
-  height: 252px;
+  width: 672px;
+  height: 374px;
   background: url(images/Knight1-Walk.png);
   animation: knight 0.9s steps(5) infinite, moveknight 5s linear infinite;
 }
@@ -52,16 +52,16 @@
   from{
     background-position: 0;
   } to {
-    background-position: 4520px;
+    background-position: 6720px;
   }
 }
 
 @keyframes moveknight {
   0% {
-    left: 4%; /* Start from the left edge */
+    left: -20%; /* Start from the left edge */
   }
   100% {
-    left: 4%; /* Move to the left edge to right*/
+    left: -20%; /* Move to the left edge to right*/
   }
 }
 
