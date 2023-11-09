@@ -31,6 +31,8 @@ inputElement.addEventListener("input", function(){
 // Initialize an empty conversation history
 let conversation = [];
 
+const form = document.forms['submit-to-chatGPT']
+
 // Function to add a user message to the conversation
 function addUserMessage(message) {
   conversation.push({ role: 'system', content: 'You are a user' });
@@ -44,16 +46,25 @@ function addChatbotMessage(message) {
 }
 
 // When the user submits a message
-function submitUserMessage() {
-  const userInput = document.getElementById('input').value;
-  addUserMessage(userInput);
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
   
-  // Make a request to GPT-3.5-turbo
+  // Get the user's message from the textarea
+  const userInput = form.elements['input'].value;
+
+  //Puts the user's message in textbox
+  addUserMessage(userInput);
+
+  //Testing
+  console.log('user:', userInput);
+
+  // Make a request to GPT-3.5-turbo with user's message
   fetchGPTResponse(conversation);
 
-  // Clear the input field
-  document.getElementById('input').value = '';
-}
+  // Clear the input textarea
+  form.elements['input'].value = '';
+});
+
 
 // Function to fetch GPT-3.5-turbo response
 function fetchGPTResponse(conversation) {
@@ -76,6 +87,10 @@ function fetchGPTResponse(conversation) {
       // Extract the chatbot's response
       const chatbotResponse = data.choices[0].message.content;
       addChatbotMessage(chatbotResponse);
+
+      //Testing
+      console.log('chat:', chatbotResponse);
+
       // Display the conversation
       displayConversation();
     })
@@ -87,11 +102,15 @@ function fetchGPTResponse(conversation) {
 // Function to display the conversation
 function displayConversation() {
   const outputTextarea = document.getElementById('output');
+  
   outputTextarea.value = conversation
-    .filter(message => message.role === 'user' || message.role === 'assistant')
-    .map(message => `${message.role === 'user' ? 'User: ' : 'Chatbot: '}${message.content}`)
-    .join('\n');
+  .filter(message => message.role === 'user' || message.role === 'assistant')
+  .map(message => `${message.role === 'user' ? 'User: ' : 'Chatbot: '}${message.content}`)
+  .join('\n');
 
-  console.log(outputTextarea.value);
+  console.log('end:', outputTextarea);
 }
+
+
+
           
