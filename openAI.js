@@ -1,12 +1,11 @@
-import { OpenAI } from 'openai';
+import { OpenAI } from '/node_modules/openai';
 
 const openai = new OpenAI({
   apiKey: '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',
 });
 
-
-
 const form = document.forms['submit-to-chatGPT']
+let chatCompletion;
 
 // When the user submits a message
 form.addEventListener('submit', function (e) {
@@ -15,8 +14,7 @@ form.addEventListener('submit', function (e) {
   // Get the user's message from the textarea
   const userInput = form.elements['input'].value;
 
-  
-  sendRequest(promt);
+  sendRequest(prompt);
 
   //Testing
   console.log('user:', userInput);
@@ -26,7 +24,7 @@ form.addEventListener('submit', function (e) {
 });
 
 async function sendRequest(promt) {
-  const chatCompletion = await openai.chat.completions.create({
+  chatCompletion = await openai.chat.completions.create({
     messages: [{ role: 'user', content: prompt }],
     model: 'gpt-3.5-turbo',
   });
