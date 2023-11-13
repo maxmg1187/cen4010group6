@@ -37,6 +37,17 @@
   background-color: #2b2e31; /* Change color on hover */
 }
 
+#muteButton{
+  position: absolute;
+  top: 8%;
+  left: 93%;
+
+  color: #000000;
+  display: none;
+}
+
+
+
 .knight {
   position: absolute;
   top: 70%;
@@ -67,6 +78,8 @@
 
 .chatGPT{
   flex-basis: 60%;
+
+  display: none;
 }
 
 .chatGPT form{
