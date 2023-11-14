@@ -2,9 +2,10 @@
   "name": "cen4010group6",
   "version": "1.0.0",
   "description": "",
-  "main": "openai.js",
+  "main": "openAI.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,7 @@
     "dotenv": "^16.3.1",
     "env": "^0.0.2",
     "express": "^4.18.2",
-    "openai": "^4.17.4",
+    "openai": "^4.17.5",
     "request": "^2.88.2"
   },
   "devDependencies": {

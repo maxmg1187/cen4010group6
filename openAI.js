@@ -1,45 +1,47 @@
-import { OpenAI } from '/node_modules/openai';
+const API_URL = "<https://api.openai.com/v1/completions>";
+const API_KEY = "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";
+const promptInput = document.getElementById("input");
+const generateBtn = document.getElementById("enterPrompt");
+const resultText = document.getElementById("output");
+const generate = async () => {
+//
+  try {
+    // Fetch the response from the OpenAI API with the signal from AbortController
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        prompt: [{ role: "user", content: promptInput.value }],
+      }),
+    });
 
-const openai = new OpenAI({
-  apiKey: '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',
+    const data = await response.json();
+    resultText.innerText = data.choices[0].message.content;
+  } catch (error) {
+    console.error("Error:", error);
+    resultText.innerText = "Error occurred while generating.";
+  }
+};
+promptInput.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    generate();
+  }
 });
+generateBtn.addEventListener("click", generate);
 
-const form = document.forms['submit-to-chatGPT']
-let chatCompletion;
-
-// When the user submits a message
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  
-  // Get the user's message from the textarea
-  const userInput = form.elements['input'].value;
-
-  sendRequest(prompt);
-
-  //Testing
-  console.log('user:', userInput);
-
-  // Clear the input textarea
-  form.elements['input'].value = '';
-});
-
-async function sendRequest(promt) {
+/* async function sendRequest() {
   chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: 'user', content: prompt }],
+    messages: [{ role: 'user', content: promptInput.value}],
     model: 'gpt-3.5-turbo',
   });
+  const data = await response.json();
+  resultText.innerText = data.choices[0].message.content;
+} */
 
-  displayConversation();
-}
-
-// Function to display the conversation
-function displayConversation() {
-  const outputTextarea = document.getElementById('output');
-  
-  outputTextarea.value += chatCompletion.choices[0].message.content;
-
-  console.log('end:', outputTextarea);
-}
 
 
           
