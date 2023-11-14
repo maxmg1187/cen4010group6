@@ -21,8 +21,6 @@ playButton.addEventListener('click', changeBackgroundAndAudio);
 function changeBackgroundAndAudio(){
 // Select a random index
 const randomIndex = Math.floor(Math.random() * imageAndSong.length);
-
-// Get the random image URL
 const random = imageAndSong[randomIndex];
 
 // Set the background image
@@ -33,11 +31,9 @@ audio.src = random.audio;
 audio.loop = true;
 audio.play();
 
+// Set mute button and input + output chat box for chatGPT to display, while the play button disappear 
 muteButton.style.display = 'flex';
-
-
 playButton.style.display = 'none';
-
 chatBox.style.display = 'flex';
 }
 

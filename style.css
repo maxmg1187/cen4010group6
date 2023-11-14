@@ -41,6 +41,7 @@
   position: absolute;
   top: 8%;
   left: 93%;
+  cursor: pointer;
 
   color: #000000;
   display: none;
