@@ -1,21 +1,25 @@
-const API_URL = "<https://api.openai.com/v1/completions>";
-const API_KEY = "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";
+const API_URL = "https://api.openai.com/v1/chat/completions";
+const API_KEY = your key
 const promptInput = document.getElementById("input");
 const generateBtn = document.getElementById("enterPrompt");
 const resultText = document.getElementById("output");
+
+const controller = new AbortController();
+const signal = controller.signal;
+
 const generate = async () => {
-//
+
   try {
     // Fetch the response from the OpenAI API with the signal from AbortController
     const response = await fetch(API_URL, {
-      method: 'POST',
+      method: 'POST', signal,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${API_KEY}`,
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
-        prompt: [{ role: "user", content: promptInput.value }],
+        messages: [{ role: 'user', content: promptInput.value}],
       }),
     });
 
