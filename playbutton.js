@@ -37,6 +37,7 @@ playButton.style.display = 'none';
 chatBox.style.display = 'flex';
 }
 
+/* Switches the audio between mute and unmute on click*/
 muteButton.addEventListener('click', toggleMute);
 
 function toggleMute() {

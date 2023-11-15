@@ -1,5 +1,3 @@
-
-
 /* Game layout */
 #header{
   width: 100%; /* Width of frame */
@@ -37,6 +35,7 @@
   background-color: #2b2e31; /* Change color on hover */
 }
 
+/* Mute button */
 #muteButton{
   position: absolute;
   top: 8%;
@@ -47,8 +46,7 @@
   display: none;
 }
 
-
-
+/* Animation for the Knight */
 .knight {
   position: absolute;
   top: 70%;
@@ -77,6 +75,7 @@
   }
 }
 
+/* Text boxes for chatGPT interactions*/
 .chatGPT{
   flex-basis: 60%;
 
@@ -87,6 +86,7 @@
   width: 100%;
 }
 
+/* Input text chat */
 #input{
   position: absolute;
   top: 95%;
@@ -104,9 +104,10 @@
   border-radius: 6px;
 }
 
+/* Output text chat */
 #output{
   position: absolute;
-  top: 10%;
+  top: 13%;
   left: 47%;
   transform: translate(-50%, -50%);
 
@@ -121,26 +122,24 @@
   border-radius: 6px;
 }
 
-form .btn2{
-  cursor: pointer;
-}
-
+/* Submit Button*/
 .btn.btn2{
   position: absolute;
   top: 95%;
   left: 93%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 
   size: 20px;
 
-  background-color: #000000; /* Background color */
-  color: #fff; /* Text color */
-  border: none; /* Remove the button border */
-  padding: 15px 25px; /* Padding around text */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to a pointer on hover */
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 15px 25px; 
+  border-radius: 5px;
+  cursor: pointer; 
 }
 
 .btn.btn2:hover {
-  background-color: #2b2e31; /* Change color on hover */
+  background-color: #2b2e31; 
 }
