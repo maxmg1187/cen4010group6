@@ -1,5 +1,5 @@
 const API_URL = "https://api.openai.com/v1/chat/completions";
-const API_KEY = YOUR KEY;
+const API_KEY = key;
 const promptInput = document.getElementById("input");
 const generateBtn = document.getElementById("submit");
 const resultText = document.getElementById("output");
@@ -32,9 +32,10 @@ const generate = async () => {
       }),
     });
 
-    resultText.innerText = "Loading...";
     const data = await response.json();
     resultText.innerText = data.choices[0].message.content;
+
+
 
     conversation.push({ role: 'user', content: promptInput.value });
     conversation.push({ role: 'assistant', content: resultText.value });
@@ -47,11 +48,11 @@ const generate = async () => {
   }
 };
 
-/* Runs request with the first initial prompt*/
+/* Runs request with the first initial prompt */
 generate();
 promptInput.value = '';
 
-/* Runs request after submit button is clicked*/
+/* Runs request after submit button is clicked */
 generateBtn.addEventListener("click", () => {
   generate();
   promptInput.value = '';
